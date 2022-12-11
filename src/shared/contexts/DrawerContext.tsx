@@ -4,7 +4,7 @@ interface IDrawerContextData {
   isDrawerOpen?: boolean;
   toogleDrawerOpen?: () => void;
   drawerOptions: IDrawerOption[];
-  setDrawerOption: (newDrawerOption: IDrawerOption[]) => void
+  setDrawerOptions: (newDrawerOption: IDrawerOption[]) => void
   children?: React.ReactNode;
 }
 
@@ -31,7 +31,7 @@ export const DrawerProvider: React.FC<IDrawerContextData> = ({ children }) => {
   }, []);
 
   return (
-    <DrawerContext.Provider value={{isDrawerOpen, drawerOptions, toogleDrawerOpen, setDrawerOption: handleSetDrawerOptions}}>
+    <DrawerContext.Provider value={{isDrawerOpen, drawerOptions, toogleDrawerOpen, setDrawerOptions: handleSetDrawerOptions}}>
       {children}
     </DrawerContext.Provider>
   );
