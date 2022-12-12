@@ -13,7 +13,7 @@ import {
 import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 
-import { useDrawerContext } from '../../contexts';
+import { useAppThemeContext, useDrawerContext } from '../../contexts';
 
 interface IMenuLateralProps {
   children: React.ReactNode;
@@ -56,6 +56,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, toogleDrawerOpen, drawerOptions } = useDrawerContext();
+  const { toogleTheme } = useAppThemeContext();
 
   return (
     <>
@@ -87,7 +88,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
           <Box flex={1}>
             <List component="nav">
-              {drawerOptions.map( drawerOption => (
+              {drawerOptions.map((drawerOption) => (
                 <ListItemLink
                   key={drawerOption.path}
                   icon={drawerOption.icon}
@@ -96,12 +97,16 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                   onClick={smDown ? toogleDrawerOpen : undefined}
                 />
               ))}
-              {/* <ListItemLink
-                icon='home'
-                label='Página Inicial'
-                to='/pagina-inicial'
-                onClick={smDown ? toogleDrawerOpen : undefined}
-              /> */}
+            </List>
+          </Box>
+          <Box>
+            <List component="nav">
+              <ListItemButton onClick={toogleTheme}>
+                <ListItemIcon>
+                  <Icon>dark_mode</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Alterar tema" />
+              </ListItemButton>
             </List>
           </Box>
         </Box>
