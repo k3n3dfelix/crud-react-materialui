@@ -1,4 +1,5 @@
-import { BarradeFerramentas } from '../../shared/components';
+import { Divider } from '@mui/material';
+import { FerramentasDeDetalhe } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 
 export const DashBoard = () => {
@@ -6,13 +7,14 @@ export const DashBoard = () => {
     <LayoutBaseDePagina
       titulo="Página Inicial"
       barraDeFerramentas={(
-        <BarradeFerramentas
-          mostrarInputBusca
-          textoBotaoNovo='Nova'
+        <FerramentasDeDetalhe
+          mostrarBotaoSalvarEFechar
+          mostrarBotaoNovo
         />
       )}
     >
       Testando
+
     </LayoutBaseDePagina>
   );
 };
