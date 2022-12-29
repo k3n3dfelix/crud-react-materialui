@@ -18,6 +18,7 @@ type TPessoasComTotalCount = {
   data: IListagemPessoa[];
   totalCount: number;
 };
+
 const getAll = async (
   page = 1,
   filter = ''

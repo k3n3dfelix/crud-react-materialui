@@ -26,9 +26,9 @@
     },
     {
       "id": 9,
-      "cidadeId": 1,
-      "email": "pedro@gmail.com",
-      "nomeCompleto": "Pedro Silva"
+      "nomeCompleto": "marias",
+      "email": "maria@gmail.com",
+      "cidadeId": "2"
     },
     {
       "id": 10,
@@ -83,6 +83,18 @@
       "email": "geronimo@gmail.com",
       "cidadeId": 5,
       "id": 157
+    },
+    {
+      "nomeCompleto": "Jose",
+      "email": "jose@gmail.com",
+      "cidadeId": "1",
+      "id": 158
+    },
+    {
+      "id": 159,
+      "nomeCompleto": "mariana s",
+      "email": "mariana@gmail.com",
+      "cidadeId": "1"
     }
   ],
   "cidades": [
