@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { LinearProgress } from '@mui/material';
+import { Box, Grid, LinearProgress, Paper } from '@mui/material';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 
@@ -80,14 +80,42 @@ export const DetalheDePessoas: React.FC = () => {
       }
     >
       <Form ref={formRef} onSubmit={handleSave}>
-        <VTextField
-          name="nomeCompleto"
-          label="Nome Completo"
-          variant="filled"
-        />
-        <VTextField name="email" label="E-Mail" variant="outlined" />
-        <VTextField name="cidadeId" placeholder="Cidade" />
-        <button type="submit">Submit</button>
+        <Box margin={1} display="flex" flexDirection="column" component={Paper}>
+          <Grid container direction="column" padding={2} spacing={2}>
+            <Grid container item direction="row">
+              <Grid item xs={6}>
+                <VTextField
+                  fullWidth
+                  name="nomeCompleto"
+                  label="Nome Completo"
+                  variant="outlined"
+                />
+              </Grid>
+            </Grid>
+            <Grid container item direction="row">
+              <Grid item xs={12} sm={8} md={6} lg={4} xl={2}>
+                <VTextField
+                  fullWidth
+                  name="email"
+                  label="E-Mail"
+                  variant="outlined"
+                />
+              </Grid>
+            </Grid>
+            <Grid container item direction="row">
+              <Grid item xs={6}>
+                <VTextField
+                  fullWidth
+                  name="cidadeId"
+                  label="Cidade"
+                  variant="outlined"
+                />
+              </Grid>
+            </Grid>
+
+            <button type="submit">Submit</button>
+          </Grid>
+        </Box>
       </Form>
 
       {/* {isLoading &&(
