@@ -99,8 +99,8 @@
   ],
   "cidades": [
     {
-      "nome": "Porto Alegre",
-      "id": 1
+      "id": 1,
+      "nome": "Porto Alegres"
     },
     {
       "nome": "Novo Hamburgo",
