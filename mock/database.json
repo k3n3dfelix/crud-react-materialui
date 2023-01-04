@@ -4,7 +4,7 @@
       "id": 3,
       "nomeCompleto": "Carlos Silva",
       "email": "carlos@gmail.com",
-      "cidadeId": 1
+      "cidadeId": 5
     },
     {
       "id": 6,
@@ -28,7 +28,7 @@
       "id": 9,
       "nomeCompleto": "marias",
       "email": "maria@gmail.com",
-      "cidadeId": "2"
+      "cidadeId": 2
     },
     {
       "id": 10,
