@@ -99,7 +99,20 @@ export const Login: React.FC<ILoginProps> = ({ children }) => {
 
         <CardActions>
           <Box width="100%" display="flex" justifyContent="center">
-            <Button variant="contained" onClick={handleSubmit} disabled={isLoading} endIcon={isLoading ? <CircularProgress variant= 'indeterminate' color='inherit'size={20}/> : undefined}>
+            <Button
+              variant="contained"
+              onClick={handleSubmit}
+              disabled={isLoading}
+              endIcon={
+                isLoading ? (
+                  <CircularProgress
+                    variant="indeterminate"
+                    color="inherit"
+                    size={20}
+                  />
+                ) : undefined
+              }
+            >
               Entrar
             </Button>
           </Box>
